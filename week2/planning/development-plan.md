@@ -23,7 +23,7 @@ How I will check that each task is completed:
 | FR3 | View, update and delete saved study tasks. |
 | FR4 | Record a priority, target date and completion status for each task. |
 | FR5 | View study tasks grouped or filtered by module, study area or completion status. |
-| FR6 | View a selected module or study area together with its own details and associated study task. |
+| FR6 | View a selected module or study area together with its own details and associated study tasks. |
 
 ### Quality requirements
 
@@ -47,21 +47,21 @@ How I will check that each task is completed:
 | T4 | FR4 | Record a priority, target date and completion status for each study task. | Must | T3 | Not started. |
 | T5 | FR5 | View study tasks grouped or filtered by module, study area or completion status. | Must | T4 | Not started. |
 | T6 | FR6 | View a selected module or study area together with its own details and associated study tasks. | Must | T5 | Not started.|
-| T7 | QR2 | Make sure the page is usable on mobile and desktop screens. | Must | T6 | Complete. |
+| T7 | QR2 | Make sure the page is usable on mobile and desktop screens. | Must | T1 | Complete. |
 | T8 | QR7 | Use meaningful HTML elements and make sure the page is readable and usable with a keyboard. | Must | T7 | Complete. |
 | T9 | Extra | Sort study tasks by target date. | Could | T8 | Not started. |
 | T10 | Extra | Add a dark colour scheme. | Could | T8 | Not started. |
 | T11 | Extra | Add user accounts and login. | Won't | - | Not started. |
 
 ## Acceptance checks
-T1: At least two study modules or study areas are shown with basic information.
+T1: At least two study modules or study areas are shown with basic information. -Met
 T2: A study task can be created, linked to a selected module or study area, and saved.
 T3: A saved study task can be viewed, updated and deleted.
 T4: Each study task shows a priority, target date and completion status.
 T5: Study tasks can be viewed by module, study area or completion status.
 T6: A selected module or study area shows its details and associated study tasks.
-T7: There is no horizontal scrolling at 360 px, 768 px and 1280 px wide.
-T8: The page uses meaningful HTML elements, can be used with a keyboard and has readable colour contrast.
+T7: There is no horizontal scrolling at 360 px, 768 px and 1280 px wide. -Met
+T8: The page uses meaningful HTML elements, can be used with a keyboard and has readable colour contrast. -Met
 T9: Study tasks can be sorted by target date.
 T10: A dark colour scheme can be applied to the page.
 T11: User accounts and login will not be built in this project.
@@ -72,13 +72,13 @@ Development goal: Create a static first version of a Personal Study Planner page
 
 ## Definition of done
 
-- [ ] The HTML is saved and opens correctly in the browser.
-- [ ] There are no obvious broken links, missing files or malformed page sections.
-- [ ] The HTML passes the W3C Nu HTML Checker with no errors.
-- [ ] Any AI-generated suggestion I used has been reviewed and tested.
-- [ ] The development plan and development log reflect what actually happened.
-- [ ] The work is committed to Git and the development log is updated.
-- [ ] All styles are in a separate styles.css file.
+- [x] The HTML is saved and opens correctly in the browser.
+- [x] There are no obvious broken links, missing files or malformed page sections.
+- [x] The HTML passes the W3C Nu HTML Checker with no errors.
+- [x] Any AI-generated suggestion I used has been reviewed and tested.
+- [x] The development plan and development log reflect what actually happened.
+- [x] The work is committed to Git and the development log is updated.
+- [x] All styles are in a separate styles.css file.
 
 ## Quality checks
 
@@ -96,9 +96,9 @@ Development goal: Create a static first version of a Personal Study Planner page
 
 | ID | Risk | Likelihood | Impact | Response / mitigation |
 | -- | ---- | ---------- | ------ | --------------------- |
-| R1 | Scope grows faster than the available time. Z Medium | High | Keep tasks small; build the core requirements first and cut Could tasks first; compare plan and progress every week. |
-| R2 | Work is lost due to a laptop faliure or a lab PC reset. | Low | High | Keep the project in OneDrive; commit to Git after each complete task. |
+| R1 | Scope grows faster than the available time. | Medium | High | Keep tasks small; build the core requirements first and cut Could tasks first; compare plan and progress every week. |
+| R2 | Work is lost due to a laptop failure or a lab PC reset. | Low | High | Keep the project in OneDrive; commit to Git after each complete task. |
 | R3 | Unverified AI-generated code introduces errors or complexity. | Medium | High | Review, understand and test each suggestion before using it; record it in the log. |
 | R4 | CSS becomes difficult to extend as more interface elements are added. | Medium | Medium | Use clear names, keep the HTML structure simple and group related CSS rules. |
-| R5 | A new tool takes longer to learn than expected. | Medium | Medium | Start learning it early and practise with small task before using it for bigger work. |
+| R5 | A new tool takes longer to learn than expected. | Medium | Medium | Start learning it early and practise with small tasks before using it for bigger work. |
 | R6 | A requirement takes more work than expected. | Medium | High | Break the requirement into smaller tasks and complete the core part first. |

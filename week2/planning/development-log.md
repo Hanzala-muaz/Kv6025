@@ -23,6 +23,8 @@ Lighthouse would not run on the local file, so I used a local PHP server and ope
 **AI use:** I asked GitHub Copilot to review my HTML for accessibility and semantic problems without rewriting the file. It suggeted using lists for the study-area cards and definition lists for some information. I did not make changes because the current HTML follows the workshop structure. I checked the page with the W3C validator and Lighthouse. Thw validator shower no errors or warnings and Lighthouse gave us an accessibility score of 100.
 **Next steps:**
 Complete the Week 2 review, upload the page to nowebspace and commit the Week 2 work to Git.
+**Git commit**
+6024bd9 - Week 2: static Personal Study Planner page
 
 | Date | Task | Tool(s) used | Decision / change | AI use / prompt | Check | Next step |
 | ---- | ---- | ------------ | ----------------- | --------------- | ------ | -------- |
@@ -65,4 +67,3 @@ Ans- Testing tools may need the page to run through a local server instead of op
 
 6- What is the next planned task?
 Ans- Release the Week 2 prototype to nuwebspace and save the work with Git.
- 
