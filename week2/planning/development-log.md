@@ -118,3 +118,27 @@ Complete the remaining Week 3 review and commit the changes to Git.
 **Copilot feedback:** Copilot recommended keeping PHP arrays for now and changing to a database when task creation, editing or prompt storage is needed.
 **My evaluation:** I agree that PHP arrays are suitable for this early prototype because they are simple to use. However, a database will be needed when user must save their tasks permanently.
 **Action taken:** I kept PHP arrays for Week 3 and noted that database storage should be considered in future development.
+
+### Week 4 – Web APIs and Service Interaction
+
+**What I worked on:**
+
+This week, I worked on creating APIs for my Personal Study Planner using PHP. I started by making an API that returns my study tasks in JSON format.
+
+I then added a way to get a specific task using its ID and filter tasks based on their status. I also created a separate weather API using Open-Meteo to get the current temperature for Newcastle.
+
+**Testing:**
+
+I tested the APIs in Google Chrome. The task API returned the correct information when I requested all tasks, a single task or tasks with a particular status.
+
+I also checked how the API handled incorrect inputs. Using Chrome Developer Tools, I confirmed that an unknown task ID returned a 404 status and an invalid ID returned a 400 status.
+
+The weather API also worked and returned temperature information from Open-Meteo.
+
+**What I learned:**
+
+I learned how to create simple APIs in PHP, return data in JSON format and use HTTP status codes to handle errors. I also learned how PHP can request information from an external API.
+
+**Next steps:**
+
+I plan to continue improving the Personal Study Planner by adding more functionality and making it easier
