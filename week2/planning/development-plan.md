@@ -52,6 +52,31 @@ How I will check that each task is completed:
 | T9 | Extra | Sort study tasks by target date. | Could | T8 | Not started. |
 | T10 | Extra | Add a dark colour scheme. | Could | T8 | Not started. |
 | T11 | Extra | Add user accounts and login. | Won't | - | Not started. |
+| T12 | FR1, QR1 | Add a "This week" sumary to the Personal Study Planner. | Must | T1 | Completed |
+| T13 | FR1, QR1 | Add an "Upcoming study" section with three study-task cards. | Could | T12 | Not Started |
+| T14 | QR6 | Design the three-layer architecture and document the decisions and trade-offs. | Must | T1 | Complete |
+| T15 | FR1, QR6 | Use PHP arrays and functions to display study areas, tasks and active task counts. | Must | T14 | Complete |
+| T16 | QR3, QR6 | Test the PHP webpage, check empty task handling and deploy it to nuwebspace. | Must | T15 | Complete |
+
+## T12 - This week summary
+
+Estimated time: 20 minutes
+
+Acceptance checks:
+- The page has a "This week" section.
+- The section shows the current focus, weekly target and next study task.
+- The HTML passes validation and the page displays correctly at 360px, 768px and 1280px.
+
+## T13- Upcoming study section
+
+Estimated time: 30 minutes
+
+Acceptance checks:
+- The page has an "Upcoming study" secton with three study-task card.
+- Each card shows the task name, study area, target date and priority.
+- The existing CSS is reused, with no javaScript, media queries, Flexbox or Grid.
+- The HTML passes validation and the page displays correctly at 360 px, 768 px and 1280 px.
+
 
 ## Acceptance checks
 T1: At least two study modules or study areas are shown with basic information. -Met
@@ -65,6 +90,9 @@ T8: The page uses meaningful HTML elements, can be used with a keyboard and has 
 T9: Study tasks can be sorted by target date.
 T10: A dark colour scheme can be applied to the page.
 T11: User accounts and login will not be built in this project.
+T14: The architecture document describes the three layers, includes a diagram, and explains two architecture decisions. - Met
+T15: The PHP webpage displays study areas and tasks from data.php, uses functions.php for task counts, and works correctly. - Met
+T16: The webpage handles an empty task list, runs on the local PHP server, and opens correctly on nuwebspace. - Met
 
 ## Week 2 goal
 
