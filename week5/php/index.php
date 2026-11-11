@@ -1,11 +1,23 @@
 <?php
+
+ini_set("display_errors", "0");
+ini_set("display_startup_errors", "0");
+ini_set("log_errors", "1");
+
 require "includes/data.php";
 require "includes/functions.php";
 
 $name = "Student";
 $week = 5;
 $year = date("Y");
+
+$weeklySummary = [
+    "focus" => "PHP and MySQL",
+    "target" => "Complete the Week 5 API",
+    "nextTask" => "Test the deployed API"
+];
 ?>
+
 <!doctype html>
 <html lang="en">
   <head>

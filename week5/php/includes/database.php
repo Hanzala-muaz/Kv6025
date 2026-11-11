@@ -1,14 +1,14 @@
-
 <?php
 
 function getDatabaseConnection()
 {
-    $host = "127.0.0.1";
-    $database = "personal_study_planner";
+    $host = getenv("DB_HOST") ?: "127.0.0.1";
+    $database = getenv("DB_NAME") ?: "personal_study_planner";
     $username = getenv("DB_USER");
     $password = getenv("DB_PASSWORD");
+    $port = getenv("DB_PORT") ?: "3306";
 
-    $dsn = "mysql:host=$host;dbname=$database;charset=utf8mb4";
+    $dsn = "mysql:host=$host;port=$port;dbname=$database;charset=utf8mb4";
 
     return new PDO($dsn, $username, $password, [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
