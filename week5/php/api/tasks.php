@@ -186,40 +186,93 @@ if (!is_array($data) || array_is_list($data)) {
     exit;
 }
 
-// Validate the updated task status
+
+// Validate all updated task fields
+if (
+    !isset($data["title"]) ||
+    !is_string($data["title"]) ||
+    trim($data["title"]) === "" ||
+    strlen($data["title"]) > 100
+) {
+    http_response_code(400);
+    echo json_encode(["error" => "Invalid task title"]);
+    exit;
+}
+
 if (
     !isset($data["status"]) ||
     !in_array($data["status"], ["To do", "Doing", "Done"], true)
 ) {
     http_response_code(400);
-
-    echo json_encode([
-        "error" => "Invalid task status"
-    ]);
-
+    echo json_encode(["error" => "Invalid task status"]);
     exit;
 }
 
-// Update the task status in MySQL
+if (
+    !isset($data["priority"]) ||
+    !in_array($data["priority"], ["Low", "Medium", "High"], true)
+) {
+    http_response_code(400);
+    echo json_encode(["error" => "Invalid task priority"]);
+    exit;
+}
+
+$areaId = filter_var(
+    $data["area_id"] ?? null,
+    FILTER_VALIDATE_INT
+);
+
+if ($areaId === false || $areaId === null || $areaId < 1) {
+    http_response_code(400);
+    echo json_encode(["error" => "Invalid study area ID"]);
+    exit;
+}
+
+// Verify the study area exists
 $statement = $pdo->prepare(
-    "UPDATE tasks SET status = ? WHERE id = ?"
+    "SELECT id FROM study_areas WHERE id = ?"
+);
+$statement->execute([$areaId]);
+
+if (!$statement->fetch()) {
+    http_response_code(400);
+    echo json_encode(["error" => "Study area does not exist"]);
+    exit;
+
+}
+
+
+// Update all four task fields in MySQL
+$statement = $pdo->prepare(
+    "UPDATE tasks
+     SET title = ?, status = ?, priority = ?, area_id = ?
+     WHERE id = ?"
 );
 
 $statement->execute([
+    trim($data["title"]),
     $data["status"],
+    $data["priority"],
+    $areaId,
     $id
 ]);
 
-// Return a success response
+
+
+ // Return all updated task details
 http_response_code(200);
 
 echo json_encode([
     "message" => "Task updated successfully",
     "id" => $id,
-    "status" => $data["status"]
+    "title" => trim($data["title"]),
+    "status" => $data["status"],
+    "priority" => $data["priority"],
+    "areaId" => $areaId
 ]);
 
 exit;
+
 }
 
 // Handle DELETE requests
@@ -265,13 +318,8 @@ $statement = $pdo->prepare(
 
 $statement->execute([$id]);
 
-http_response_code(200);
-
-echo json_encode([
-    "message" => "Task deleted successfully",
-    "id" => $id
-]);
-
+// Successful deletion: no response body
+http_response_code(204);
 exit;
 }
 
