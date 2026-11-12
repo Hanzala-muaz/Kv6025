@@ -1,0 +1,16 @@
+import { Link } from 'react-router'
+
+function NotFoundPage() {
+  return (
+    <section>
+      <h2>404 — Page Not Found</h2>
+      <p>Sorry, the page you are looking for does not exist.</p>
+
+      <p>
+        <Link to="/">Return to Home</Link>
+      </p>
+    </section>
+  )
+}
+
+export default NotFoundPage

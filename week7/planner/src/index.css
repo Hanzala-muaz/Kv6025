@@ -1,0 +1,150 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2937;
+  background: #f5f7fb;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  line-height: 1.6;
+}
+
+a {
+  color: #2563eb;
+}
+
+a:focus-visible {
+  outline: 3px solid #f59e0b;
+  outline-offset: 3px;
+}
+
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1.5rem;
+}
+
+.site-header h1 {
+  margin: 0 0 1rem;
+  font-size: 1.6rem;
+}
+
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.site-header nav a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-header nav a.active {
+  color: #1e40af;
+  text-decoration: underline;
+}
+
+#main-content {
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.summary-grid,
+.task-grid,
+.area-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.summary-card,
+.task-card,
+.area-card,
+.task-detail {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+
+.summary-card h3 {
+  margin-top: 0;
+}
+
+.summary-card p {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.task-card h3,
+.area-card h3 {
+  margin-top: 0;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.status-to-do {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-doing {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.status-done {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  color: #6b7280;
+}
+
+@media (min-width: 48rem) {
+  .site-header {
+    padding: 2rem;
+  }
+
+  #main-content {
+    padding: 2rem;
+  }
+
+  .summary-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .task-grid,
+  .area-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

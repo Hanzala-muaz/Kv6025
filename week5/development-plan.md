@@ -61,3 +61,22 @@ Week 5 changes were committed and pushed to GitHub.
 - Branch: `main`
 - Latest completed commit: `aee874c`
 - Database credentials were excluded from the committed files.
+
+
+## Week 7 — React Frontend
+
+### Completed
+- Created the React project using Vite.
+- Developed five pages with React Router.
+- Created reusable components for tasks and study areas.
+- Added responsive CSS for different screen sizes.
+- Tested navigation, accessibility, and invalid routes.
+- Successfully tested the production build.
+
+### Week 8 — Planned Work
+- Connect the React frontend to the Week 5 PHP/MySQL API.
+- Retrieve task data from the API.
+- Add forms for creating and editing tasks.
+- Implement task deletion.
+- Test the frontend and backend integration.
+- Update the documentation and development log.

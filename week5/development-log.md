@@ -82,3 +82,27 @@ Committed and pushed the Week 5 changes to GitHub.
 - Branch: `main`
 - Commit: `aee874c`
 - Database credentials were not included in the committed changes.
+
+
+## Week 7 — Building a React Frontend
+
+### Work Completed
+- Created a React frontend using Vite.
+- Developed five pages using React Router.
+- Added reusable components and responsive CSS.
+- Used five sample tasks and two study areas.
+
+### Testing
+- Tested navigation, task details, and invalid URLs.
+- Checked keyboard navigation and responsive layouts.
+- Successfully tested the production build and preview.
+
+### Problems and Solutions
+- PowerShell blocked npm scripts. Used a temporary execution policy bypass.
+- A component filename typo caused a blank page. Corrected the filename.
+
+### AI Assistance
+ChatGPT was used to help understand React concepts, provide example code, and troubleshoot issues such as the PowerShell execution policy restriction and an incorrectly named component file. The application was tested locally.
+
+### Next Steps
+Connect the React frontend to the Week 5 PHP/MySQL API and implement task management forms during Week 8.
